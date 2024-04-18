@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenmatch_java_alura.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Frist commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Principal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -69,11 +63,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713403183677</updated>
-      <workItem from="1713403184734" duration="303000" />
+      <workItem from="1713403184734" duration="535000" />
     </task>
+    <task id="LOCAL-00001" summary="Frist commit">
+      <option name="closed" value="true" />
+      <created>1713403517847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713403517847</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Frist commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frist commit" />
   </component>
 </project>
