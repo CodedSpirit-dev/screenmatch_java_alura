@@ -19,5 +19,10 @@ public class Principal {
         TheMatrixReloaded.lengthInMinutes = 138;
         TheMatrixReloaded.includedInTheUserPlan = false;
 
+        System.out.println("My movie is " + TheMatrixReloaded.name);
+        System.out.println("It was released in " + TheMatrixReloaded.year);
+        System.out.println("It lasts " + TheMatrixReloaded.lengthInMinutes + " minutes");
+        System.out.println("Is it included in the user plan? " + TheMatrixReloaded.includedInTheUserPlan);
+
     }
 }
