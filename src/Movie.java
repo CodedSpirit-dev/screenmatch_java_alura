@@ -1,19 +1,24 @@
 public class Movie {
-    String name;
-    int year;
-    int lengthInMinutes;
-    Boolean includedInTheUserPlan;
+    String movieName;
+    int releaseYear;
+    int durationInMinutes;
+    Boolean isUserPlanIncluded;
+    double sumOfRatings;
+    int numberOfRatings;
 
-    void showMovieInfo() {
-        System.out.println("My movie is " + name);
-        System.out.println("It was released in " + year);
-        System.out.println("It lasts " + lengthInMinutes + " minutes");
-        System.out.println("Is it included in the user plan? " + includedInTheUserPlan);
+    void displayMovieInfo() {
+        System.out.println("Movie name: " + movieName);
+        System.out.println("Release year: " + releaseYear);
+        System.out.println("Duration: " + durationInMinutes + " minutes");
+        System.out.println("Included in user plan? " + isUserPlanIncluded);
     }
 
-    // Method to check if the movie is included in the user plan
+    void rateMovie(double rating){
+        sumOfRatings += rating;
+        numberOfRatings++;
+    }
 
-    Boolean checkIfIncludedInTheUserPlan() {
-        return includedInTheUserPlan;
+    double getAverageRating(){
+        return sumOfRatings / numberOfRatings;
     }
 }
