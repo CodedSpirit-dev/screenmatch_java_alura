@@ -12,4 +12,8 @@ public class Movie {
     }
 
     // Method to check if the movie is included in the user plan
+
+    Boolean checkIfIncludedInTheUserPlan() {
+        return includedInTheUserPlan;
+    }
 }
