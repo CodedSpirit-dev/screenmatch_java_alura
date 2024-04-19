@@ -10,4 +10,6 @@ public class Movie {
         System.out.println("It lasts " + lengthInMinutes + " minutes");
         System.out.println("Is it included in the user plan? " + includedInTheUserPlan);
     }
+
+    // Method to check if the movie is included in the user plan
 }
