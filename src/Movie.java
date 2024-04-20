@@ -21,12 +21,12 @@ public class Movie {
         System.out.println("Included in user plan? " + isUserPlanIncluded);
     }
 
-    void rateMovie(double rating){
+    void rateMovie(double rating) {
         sumOfRatings += rating;
         numberOfRatings++;
     }
 
-    double getAverageRating(){
+    double getAverageRating() {
         return sumOfRatings / numberOfRatings;
     }
 }

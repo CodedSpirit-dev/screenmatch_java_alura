@@ -11,12 +11,11 @@ public class Principal {
         TheMatrix.rateMovie(9.5);
         TheMatrix.rateMovie(10.0);
 
-        System.out.println(TheMatrix.sumOfRatings);
-        System.out.println(TheMatrix.);
+        System.out.println(TheMatrix.getSumOfRatings());
+        System.out.println(TheMatrix.getNumberOfRatings());
         System.out.println(TheMatrix.getAverageRating());
 
         System.out.println("-------------------------------------------------");
-
 
         Movie TheMatrixReloaded;
         TheMatrixReloaded = new Movie();
@@ -29,12 +28,11 @@ public class Principal {
         TheMatrixReloaded.rateMovie(8.5);
         TheMatrixReloaded.rateMovie(9.0);
 
-        System.out.println(TheMatrixReloaded.sumOfRatings);
-        System.out.println(TheMatrixReloaded.numberOfRatings);
+        System.out.println(TheMatrixReloaded.getSumOfRatings());
+        System.out.println(TheMatrixReloaded.getNumberOfRatings());
         System.out.println(TheMatrixReloaded.getAverageRating());
 
         System.out.println("-------------------------------------------------");
-        
 
     }
 }
