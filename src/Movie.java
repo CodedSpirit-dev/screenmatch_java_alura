@@ -3,8 +3,16 @@ public class Movie {
     int releaseYear;
     int durationInMinutes;
     Boolean isUserPlanIncluded;
-    double sumOfRatings;
-    int numberOfRatings;
+    private double sumOfRatings;
+    private int numberOfRatings;
+
+    int getNumberOfRatings() {
+        return numberOfRatings;
+    }
+
+    double getSumOfRatings() {
+        return sumOfRatings;
+    }
 
     void displayMovieInfo() {
         System.out.println("Movie name: " + movieName);
