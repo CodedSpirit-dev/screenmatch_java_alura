@@ -22,4 +22,9 @@ public class Movie extends Title implements Classification {
     public int getTotalVisualizations() {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Movie  " + this.getName() + " (" + getReleaseYear() + ")";
+    }
 }
