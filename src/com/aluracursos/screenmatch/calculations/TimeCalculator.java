@@ -7,11 +7,11 @@ public class TimeCalculator {
     private int totalTime;
 
     public int getTotalTime() {
-        return totalTime;
+        return this.totalTime;
     }
 
     public void totalEstimatedTimeTitle(Title title ){ //This method show how much time will take to complete all the series and movies included in a list
-       this.totalTime += title.getDurationInMinutes();
-        System.out.println("The total time to watch all the series and movies included in the list is: " + totalTime + " minutes");
+        System.out.println("Adding a length of " + title.getDurationInMinutes() + " minutes to the total time");
+        this.totalTime += title.getDurationInMinutes();
     }
 }

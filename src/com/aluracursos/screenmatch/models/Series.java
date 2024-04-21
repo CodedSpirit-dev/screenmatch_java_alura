@@ -5,6 +5,10 @@ public class Series extends Title{
     private int numberOfEpisodesPerSeason;
     private int minutesPerEpisode;
 
+    public Series(String name) {
+        super();
+    }
+
     @Override
     public int getDurationInMinutes() {
         return minutesPerEpisode * numberOfSeasons * numberOfEpisodesPerSeason;

@@ -10,8 +10,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("-------------------------------------------------");
 
-        Movie theMatrix = new Movie();
-        theMatrix.setName("The Matrix");
+        Movie theMatrix = new Movie("The Matrix");
         theMatrix.setReleaseYear(1999);
         theMatrix.setDurationInMinutes(136);
 
@@ -23,8 +22,7 @@ public class Main {
 
         System.out.println("-------------------------------------------------");
 
-        Series houseOfCards = new Series();
-        houseOfCards.setName("House of Cards");
+        Series houseOfCards = new Series("House of Cards");
         houseOfCards.setReleaseYear(2013);
         houseOfCards.setNumberOfSeasons(6);
         houseOfCards.setNumberOfEpisodesPerSeason(13);
@@ -38,8 +36,7 @@ public class Main {
 
         TimeCalculator timeCalculator = new TimeCalculator();
 
-        Movie theMatrixReloaded = new Movie();
-        theMatrixReloaded.setName("The Matrix Reloaded");
+        Movie theMatrixReloaded = new Movie("The Matrix Reloaded");
         theMatrixReloaded.setReleaseYear(2003);
         theMatrixReloaded.setDurationInMinutes(138);
 
@@ -65,18 +62,16 @@ public class Main {
 
         System.out.println("-------------------------------------------------");
 
-        Movie avatar = new Movie();
-        avatar.setName("Avatar");
+        Movie avatar = new Movie("Avatar");
         avatar.setReleaseYear(2023);
         avatar.setDurationInMinutes(200);
 
-        Movie theLordOfTheRings = new Movie();
-        theLordOfTheRings.setName("The Lord of the Rings");
+        Movie theLordOfTheRings = new Movie("The Lord of the Rings");
         theLordOfTheRings.setReleaseYear(2001);
         theLordOfTheRings.setDurationInMinutes(180);
 
-        Series lost = new Series();
-        lost.setName("Lost");
+        Series lost;
+        lost = new Series("Lost");
         lost.setReleaseYear(2000);
         lost.setNumberOfSeasons(10);
         lost.setNumberOfEpisodesPerSeason(10);
