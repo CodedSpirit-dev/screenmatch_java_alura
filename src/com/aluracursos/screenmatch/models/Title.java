@@ -8,7 +8,10 @@ public class Title {
     private double sumOfRatings;
     private int numberOfRatings;
 
-
+    public Title(String name, int releaseYear) {
+        Name = name;
+        this.releaseYear = releaseYear;
+    }
 
     public String getName() {
         return Name;

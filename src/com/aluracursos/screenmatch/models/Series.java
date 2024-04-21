@@ -5,8 +5,8 @@ public class Series extends Title{
     private int numberOfEpisodesPerSeason;
     private int minutesPerEpisode;
 
-    public Series(String name) {
-        super();
+    public Series(String name, int releaseYear) {
+        super(name, releaseYear);
     }
 
     @Override
