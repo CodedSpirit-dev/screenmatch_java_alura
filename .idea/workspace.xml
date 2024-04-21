@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Trabajando con listas">
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Comparando y ordenando por lista">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/main/MainWithLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/main/MainWithLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Series.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Series.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Title.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,7 @@
       <workItem from="1713637165811" duration="15346000" />
       <workItem from="1713720177179" duration="8000" />
       <workItem from="1713720946468" duration="6518000" />
-      <workItem from="1713734539863" duration="566000" />
+      <workItem from="1713734539863" duration="1087000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -199,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713733511777</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Comparando y ordenando por lista">
+      <option name="closed" value="true" />
+      <created>1713735120553</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713735120553</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +246,7 @@
     <MESSAGE value="Adding a .tostring change" />
     <MESSAGE value="Changing constructor of movie and series" />
     <MESSAGE value="Trabajando con listas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trabajando con listas" />
+    <MESSAGE value="Comparando y ordenando por lista" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comparando y ordenando por lista" />
   </component>
 </project>

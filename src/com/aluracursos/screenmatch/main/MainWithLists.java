@@ -11,6 +11,7 @@ import com.aluracursos.screenmatch.models.Title;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Main class with lists
@@ -67,5 +68,9 @@ public class MainWithLists {
         System.out.println("List of artists: " + listOfArtists);
         Collections.sort(titleList);
         System.out.println("List of ordered titles: " + titleList);
+
+        //Ordering by year and name
+        titleList.sort(Comparator.comparing(Title::getReleaseYear).thenComparing(Title::getName));
+        System.out.println("List of ordered titles by name and year: " + titleList);
     }
 }
