@@ -1,5 +1,8 @@
+import com.aluracursos.screenmatch.calculations.TimeCalculator;
+import com.aluracursos.screenmatch.models.Episode;
 import com.aluracursos.screenmatch.models.Movie;
 import com.aluracursos.screenmatch.models.Series;
+import com.aluracursos.screenmatch.calculations.RecommendationFilter;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +17,7 @@ public class Main {
 
         TheMatrix.displayInfo();
         TheMatrix.rateTitle(9.5);
-        TheMatrix.rateTitle(10.0);
+        TheMatrix.rateTitle(8.0);
 
         System.out.println("-------------------------------------------------");
 
@@ -29,22 +32,31 @@ public class Main {
 
         System.out.println("-------------------------------------------------");
 
-        /*com.aluracursos.screenmatch.models.Movie TheMatrixReloaded;
-        TheMatrixReloaded = new com.aluracursos.screenmatch.models.Movie();
-        TheMatrixReloaded.movieName = "The Matrix Reloaded";
-        TheMatrixReloaded.releaseYear = 2003;
-        TheMatrixReloaded.durationInMinutes = 138;
-        TheMatrixReloaded.isUserPlanIncluded = false;
+        TimeCalculator timeCalculator = new TimeCalculator();
 
-        TheMatrixReloaded.displayMovieInfo();
-        TheMatrixReloaded.rateMovie(8.5);
-        TheMatrixReloaded.rateMovie(9.0);
+        Movie TheMatrixReloaded;
+        TheMatrixReloaded = new Movie();
+        TheMatrixReloaded.setName("The Matrix Reloaded");
+        TheMatrixReloaded.setReleaseYear(2003);
+        TheMatrixReloaded.setDurationInMinutes(138);
+        TheMatrixReloaded.setUserPlanIncluded(true);
+        TheMatrixReloaded.displayInfo();
 
-        System.out.println(TheMatrixReloaded.getSumOfRatings());
-        System.out.println(TheMatrixReloaded.getNumberOfRatings());
-        System.out.println(TheMatrixReloaded.getAverageRating());
+        timeCalculator.totalEstimatedTimeTitle(TheMatrix);
+        timeCalculator.totalEstimatedTimeTitle(houseOfCards);
+        timeCalculator.totalEstimatedTimeTitle(TheMatrixReloaded);
 
-        System.out.println("-------------------------------------------------");*/
+        System.out.println("-------------------------------------------------");
 
+        RecommendationFilter recommendationFilter = new RecommendationFilter();
+        recommendationFilter.filter(TheMatrix);
+
+        Episode episode = new Episode();
+        episode.setEpisodeNumber(1);
+        episode.setEpisodeName("Chapter 1");
+        episode.setSeries(houseOfCards);
+        episode.setTotalVisualizations(1000);
+
+        recommendationFilter.filter(episode);
     }
 }
