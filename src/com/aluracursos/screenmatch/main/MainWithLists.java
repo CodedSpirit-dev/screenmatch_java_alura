@@ -9,6 +9,8 @@ import com.aluracursos.screenmatch.calculations.RecommendationFilter;
 import com.aluracursos.screenmatch.models.Title;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Main class with lists
@@ -37,9 +39,9 @@ public class MainWithLists {
 
         // Creating a list of titles and adding the movies and series to it
         ArrayList<Title> titleList = new ArrayList<>();
+        titleList.add(avatar);
         titleList.add(theMatrix);
         titleList.add(theMatrixReloaded);
-        titleList.add(avatar);
         titleList.add(theLordOfTheRings);
         titleList.add(houseOfCards);
         titleList.add(lost);
@@ -51,5 +53,19 @@ public class MainWithLists {
                 System.out.println("Classification: " + movie.getClassification());
             }
         }
+
+        ArrayList<String> listOfArtists = new ArrayList<>();
+        listOfArtists.add("Keanu Reeves");
+        listOfArtists.add("Carrie-Anne Moss");
+        listOfArtists.add("Laurence Fishburne");
+        listOfArtists.add("Hugo Weaving");
+        listOfArtists.add("Zachary Levi");
+        listOfArtists.add("Andy Wachowski");
+
+        //Ordering the list of artists
+        Collections.sort(listOfArtists);
+        System.out.println("List of artists: " + listOfArtists);
+        Collections.sort(titleList);
+        System.out.println("List of ordered titles: " + titleList);
     }
 }
