@@ -1,9 +1,12 @@
 package com.aluracursos.screenmatch.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Title implements Comparable<Title> {
 
-
-    private String Name;
+    @SerializedName("Title")
+    private String name;
+    @SerializedName("Year")
     public int releaseYear;
     public int durationInMinutes;
     public Boolean isUserPlanIncluded;
@@ -11,15 +14,24 @@ public class Title implements Comparable<Title> {
     private int numberOfRatings;
 
     public Title(String name, int releaseYear) {
-        Name = name;
+        this.name = name;
         this.releaseYear = releaseYear;
+
+    }
+
+    public Title(TitleOmdb myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+        this.releaseYear = Integer.valueOf(myTitleOmdb.year());
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
+
+
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
     public void setName(String Name) {
-        this.Name = Name;
+        this.name = Name;
     }
     public int getReleaseYear() {
         return releaseYear;
@@ -57,7 +69,7 @@ public class Title implements Comparable<Title> {
     }
 
     public void displayInfo() {
-        System.out.println("Title name: " + Name);
+        System.out.println("Title name: " + name);
         System.out.println("Release year: " + releaseYear);
         System.out.println("Duration: " + getDurationInMinutes() + " minutes");
         System.out.println("Included in user plan? " + isUserPlanIncluded);
@@ -75,5 +87,12 @@ public class Title implements Comparable<Title> {
     @Override
     public int compareTo(Title otherTitle) {
         return this.getName().compareTo(otherTitle.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", duration in minutes=" + durationInMinutes;
     }
 }
