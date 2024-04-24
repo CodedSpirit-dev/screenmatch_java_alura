@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Comparando y ordenando por lista">
-      <change afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/main/mainWithSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/TitleOmdb.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Using gson for the project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenmatch_java_alura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/screenmatch_java_alura.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Title.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +61,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/VIrad/Downloads/gson-2.10.1.jar",
+    "last_opened_file_path": "C:/Users/VIrad/Downloads",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,7 +98,9 @@
       <workItem from="1713720946468" duration="6518000" />
       <workItem from="1713734539863" duration="1087000" />
       <workItem from="1713737556029" duration="332000" />
-      <workItem from="1713740043648" duration="4901000" />
+      <workItem from="1713740043648" duration="6293000" />
+      <workItem from="1713752931600" duration="624000" />
+      <workItem from="1713830672544" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -224,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713737884588</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Using gson for the project">
+      <option name="closed" value="true" />
+      <created>1713746120583</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713746120583</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +269,7 @@
     <MESSAGE value="Changing constructor of movie and series" />
     <MESSAGE value="Trabajando con listas" />
     <MESSAGE value="Comparando y ordenando por lista" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comparando y ordenando por lista" />
+    <MESSAGE value="Using gson for the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using gson for the project" />
   </component>
 </project>
