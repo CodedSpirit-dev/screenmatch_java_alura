@@ -4,45 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Adding Maven and error exceptions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/calculations/Classification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/calculations/RecommendationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/calculations/TimeCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/exception/ErrorConvertionOfLengthException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/MainWithLists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/mainWithSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/models/Episode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/models/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/models/Series.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/models/Title.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/models/TitleOmdb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/ApiConsume.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Adding Jackson and Gson">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/EpisodeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/SeriesData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/DataConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/IDataConversion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/calculations/Classification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/calculations/RecommendationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/calculations/TimeCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/main/MainWithLists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/main/mainWithSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/models/Episode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/models/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/models/Series.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/models/Title.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/screenmatch_java_alura/com/aluracursos/screenmatch/models/TitleOmdb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/calculations/Classification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/calculations/RecommendationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/calculations/TimeCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/exception/ErrorConvertionOfLengthException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/main/MainWithLists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/main/mainWithSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Episode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Series.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/Title.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/models/TitleOmdb.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -110,12 +78,13 @@
     "Application.mainWithSearch.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth0": "900",
+    "RequestMappingsPanelWidth1": "899",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ScreenmatchApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/VIrad/Downloads",
     "node.js.detected.package.eslint": "true",
@@ -142,8 +111,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -168,6 +137,11 @@
       <workItem from="1713830672544" duration="59000" />
       <workItem from="1714362720319" duration="1896000" />
       <workItem from="1714435503371" duration="2321000" />
+      <workItem from="1714438927630" duration="766000" />
+      <workItem from="1714439715167" duration="69000" />
+      <workItem from="1714439792751" duration="2229000" />
+      <workItem from="1714544719840" duration="741000" />
+      <workItem from="1714578367141" duration="881000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -313,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714364640664</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adding Jackson and Gson">
+      <option name="closed" value="true" />
+      <created>1714438990441</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714438990441</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +337,7 @@
     <MESSAGE value="Comparando y ordenando por lista" />
     <MESSAGE value="Using gson for the project" />
     <MESSAGE value="Adding Maven and error exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Maven and error exceptions" />
+    <MESSAGE value="Adding Jackson and Gson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Jackson and Gson" />
   </component>
 </project>
