@@ -1,5 +1,7 @@
 package com.aluracursos.screenmatch;
 
+import com.aluracursos.screenmatch.main.Main;
+import com.aluracursos.screenmatch.main01.Main01;
 import com.aluracursos.screenmatch.model.EpisodeData;
 import com.aluracursos.screenmatch.model.SeasonData;
 import com.aluracursos.screenmatch.model.SeriesData;
@@ -21,7 +23,8 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
+        Main01 main01 = new Main01();
+        main01.showMenu();
     }
 
 }

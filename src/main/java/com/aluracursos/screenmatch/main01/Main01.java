@@ -1,5 +1,6 @@
 package com.aluracursos.screenmatch.main01;
 
+import com.aluracursos.screenmatch.model.EpisodeData;
 import com.aluracursos.screenmatch.model.SeasonData;
 import com.aluracursos.screenmatch.model.SeriesData;
 import com.aluracursos.screenmatch.service.ApiConsume;
@@ -13,7 +14,7 @@ import java.util.Scanner;
  * Main class for the application.
  * This class is responsible for interacting with the user and orchestrating the flow of the application.
  */
-public class main01 {
+public class Main01 {
     // Scanner object for reading user input
     private Scanner keyboard = new Scanner(System.in);
     // Service for consuming the API
@@ -38,6 +39,8 @@ public class main01 {
         var json = apiConsume.obtainData(URL_BASE + "=" + seriesName.replace(" ", "+") + API_KEY);
         // Convert the data to a SeriesData object
         var data = converter.obtainData(json, SeriesData.class);
+        // Print the data for the series
+        System.out.println(data);
 
         // List to store the data for each season
         List<SeasonData> seasons = new ArrayList<>();
@@ -52,5 +55,16 @@ public class main01 {
         }
         // Print the data for each season
         seasons.forEach(System.out::println);
+
+        //Show only the title of the series to the seasons
+ /*       for (int i = 0; i < data.totalSeasons(); i++) {
+            List<EpisodeData> episodesSeason = seasons.get(i).episodes();
+            //Show the title of the series
+            for (EpisodeData episodeData : episodesSeason) {
+                System.out.println(episodeData.title());
+            }
+        }*/
+        seasons.forEach(t -> t.episodes().forEach(e -> System.out.println(e.title())));
+
     }
 }
