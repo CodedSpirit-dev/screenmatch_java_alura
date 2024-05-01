@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Adding Jackson and Gson">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/EpisodeData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/SeriesData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/DataConversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/IDataConversion.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Adding episode">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main01/main01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/SeasonData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/DataConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/DataConversion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -78,8 +77,8 @@
     "Application.mainWithSearch.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "900",
-    "RequestMappingsPanelWidth1": "899",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ScreenmatchApplication.executor": "Run",
@@ -141,7 +140,7 @@
       <workItem from="1714439715167" duration="69000" />
       <workItem from="1714439792751" duration="2229000" />
       <workItem from="1714544719840" duration="741000" />
-      <workItem from="1714578367141" duration="881000" />
+      <workItem from="1714578367141" duration="5316000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -295,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714438990441</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Adding episode">
+      <option name="closed" value="true" />
+      <created>1714579374879</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714579374879</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +345,7 @@
     <MESSAGE value="Using gson for the project" />
     <MESSAGE value="Adding Maven and error exceptions" />
     <MESSAGE value="Adding Jackson and Gson" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Jackson and Gson" />
+    <MESSAGE value="Adding episode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding episode" />
   </component>
 </project>
