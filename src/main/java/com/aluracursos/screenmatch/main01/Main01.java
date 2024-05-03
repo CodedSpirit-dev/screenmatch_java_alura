@@ -1,5 +1,6 @@
 package com.aluracursos.screenmatch.main01;
 
+import com.aluracursos.screenmatch.model.Episode;
 import com.aluracursos.screenmatch.model.EpisodeData;
 import com.aluracursos.screenmatch.model.SeasonData;
 import com.aluracursos.screenmatch.model.SeriesData;
@@ -7,8 +8,10 @@ import com.aluracursos.screenmatch.service.ApiConsume;
 import com.aluracursos.screenmatch.service.DataConversion;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * Main class for the application.
@@ -66,5 +69,24 @@ public class Main01 {
         }*/
         seasons.forEach(t -> t.episodes().forEach(e -> System.out.println(e.title())));
 
+        //Convert all the information into a list of the type "episodeData"
+        List<EpisodeData> episodesData = seasons.stream()
+                .flatMap(t -> t.episodes().stream())
+                        .collect(Collectors.toList());
+
+        //Top 5 episodes
+        System.out.println("===Top 5 episodes===");
+        episodesData.stream()
+                .filter(e -> !e.imdbRating().equalsIgnoreCase("N/A"))
+                .sorted(Comparator.comparing(EpisodeData::imdbRating).reversed())
+                .limit(5)
+                .forEach(System.out::println);
+
+        // Transforming data into a episode type list
+        List<Episode> episodes = seasons.stream()
+                .flatMap(t -> t.episodes().stream()
+                        .map(d -> new Episode(t.seasonNumber(), d)))
+                .collect(Collectors.toList());
+        episodes.forEach(System.out::println);
     }
 }

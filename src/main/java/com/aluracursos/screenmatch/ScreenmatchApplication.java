@@ -17,10 +17,13 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-//        Main01 main01 = new Main01();
-//        main01.showMenu();
-        StreamsExample streamsExample = new StreamsExample();
-        streamsExample.exampleUsage();
+        Main01 main01 = new Main01();
+        main01.showMenu();
+
+
+
+/*        StreamsExample streamsExample = new StreamsExample();
+        streamsExample.exampleUsage();*/
     }
 
 }
