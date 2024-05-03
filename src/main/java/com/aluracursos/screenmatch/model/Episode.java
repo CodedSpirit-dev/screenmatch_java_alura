@@ -1,6 +1,7 @@
 package com.aluracursos.screenmatch.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 public class Episode {
     private Integer season;
@@ -18,7 +19,11 @@ public class Episode {
         }catch (NumberFormatException e){
             this.imbdRating = 0.0;
         }
-        this.launchDate = LocalDate.parse(d.released());
+        try {
+            this.launchDate = LocalDate.parse(d.released());
+        } catch (DateTimeParseException e){
+            this.launchDate = null;
+        }
     }
 
 
