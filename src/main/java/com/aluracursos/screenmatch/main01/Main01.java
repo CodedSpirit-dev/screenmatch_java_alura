@@ -7,10 +7,9 @@ import com.aluracursos.screenmatch.model.SeriesData;
 import com.aluracursos.screenmatch.service.ApiConsume;
 import com.aluracursos.screenmatch.service.DataConversion;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -57,36 +56,79 @@ public class Main01 {
             seasons.add(dataSeason);
         }
         // Print the data for each season
-        seasons.forEach(System.out::println);
+        //seasons.forEach(System.out::println);
 
         //Show only the title of the series to the seasons
- /*       for (int i = 0; i < data.totalSeasons(); i++) {
+        /*for (int i = 0; i < data.totalSeasons(); i++) {
             List<EpisodeData> episodesSeason = seasons.get(i).episodes();
             //Show the title of the series
             for (EpisodeData episodeData : episodesSeason) {
                 System.out.println(episodeData.title());
             }
         }*/
-        seasons.forEach(t -> t.episodes().forEach(e -> System.out.println(e.title())));
+        //seasons.forEach(t -> t.episodes().forEach(e -> System.out.println(e.title())));
 
         //Convert all the information into a list of the type "episodeData"
         List<EpisodeData> episodesData = seasons.stream()
                 .flatMap(t -> t.episodes().stream())
-                        .collect(Collectors.toList());
+                .collect(Collectors.toList());
+
+
 
         //Top 5 episodes
-        System.out.println("===Top 5 episodes===");
+        /*System.out.println("===Top 5 episodes===");
         episodesData.stream()
                 .filter(e -> !e.imdbRating().equalsIgnoreCase("N/A"))
                 .sorted(Comparator.comparing(EpisodeData::imdbRating).reversed())
                 .limit(5)
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
 
         // Transforming data into a episode type list
         List<Episode> episodes = seasons.stream()
                 .flatMap(t -> t.episodes().stream()
                         .map(d -> new Episode(t.seasonNumber(), d)))
                 .collect(Collectors.toList());
-        episodes.forEach(System.out::println);
-    }
-}
+        //episodes.forEach(System.out::println);
+
+        //Search episodes by specific year
+    /*System.out.println("Please write the year you want to search for: ");
+    var date = keyboard.nextInt();
+    keyboard.nextLine();
+
+    LocalDate dateSearch = LocalDate.of(date, 1, 1);
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    episodes.stream()
+            .filter(e -> e.getLaunchDate() != null && e.getLaunchDate().isAfter(dateSearch))
+            .forEach(e -> System.out.println(
+                    "Season: " + e.getSeason() +
+                            " Title: " + e.getTitle() +
+                            " Launch Date: " + e.getLaunchDate().format(dtf)
+            ));*/
+
+        // Search episodes by title fragments
+/*        System.out.println("Please write the title fragment you want to search for: ");
+        var titleFragment = keyboard.nextLine();
+
+        Optional<Episode> searchedEpisode = episodes.stream()
+                .filter(e -> e.getTitle().toUpperCase().contains(titleFragment.toUpperCase()))
+                .findFirst();
+
+        if (searchedEpisode.isPresent()) {
+            System.out.println(searchedEpisode.get());
+        } else {
+            System.out.println("No episode found with the title fragment: " + titleFragment);
+        }*/
+
+        Map<Integer, Double> averageRatingBySeason = episodes.stream()
+                .filter(e -> e.getImbdRating() > 0.0)
+                .collect(Collectors.groupingBy(Episode::getSeason,
+                        Collectors.averagingDouble(Episode::getImbdRating)));
+
+        System.out.println(averageRatingBySeason);
+
+        DoubleSummaryStatistics est = episodes.stream()
+                .filter(e -> e.getImbdRating() > 0.0)
+                .collect(Collectors.summarizingDouble(Episode::getImbdRating));
+        System.out.println("Worst evaluation: " + est.getMin() + "\nBest evaluation: " + est.getMax() + "\nAverage: " + est.getAverage());
+    }}
