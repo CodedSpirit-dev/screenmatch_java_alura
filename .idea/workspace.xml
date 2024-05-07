@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Creation of a model for Serie">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/UseChatGPT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/GenreGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/GenreGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/SeriesData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/SeriesData.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Agregando chatgpt">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/UseChatGPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/UseChatGPT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +150,7 @@
       <workItem from="1714795119652" duration="2149000" />
       <workItem from="1714843140133" duration="683000" />
       <workItem from="1715048316212" duration="872000" />
-      <workItem from="1715049199778" duration="5840000" />
+      <workItem from="1715049199778" duration="6178000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -390,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715052786715</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Agregando chatgpt">
+      <option name="closed" value="true" />
+      <created>1715058403552</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1715058403552</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +443,18 @@
     <MESSAGE value="Generando busquedas y estadistica" />
     <MESSAGE value="Erasing unnecesary files" />
     <MESSAGE value="Creation of a model for Serie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation of a model for Serie" />
+    <MESSAGE value="Agregando chatgpt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando chatgpt" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
