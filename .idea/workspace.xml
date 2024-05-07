@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Agregando chatgpt">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/UseChatGPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/UseChatGPT.java" afterDir="false" />
-    </list>
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Agregando chatgpt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +148,7 @@
       <workItem from="1714795119652" duration="2149000" />
       <workItem from="1714843140133" duration="683000" />
       <workItem from="1715048316212" duration="872000" />
-      <workItem from="1715049199778" duration="6178000" />
+      <workItem from="1715049199778" duration="6257000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -392,7 +390,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715058403552</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Agregando chatgpt">
+      <option name="closed" value="true" />
+      <created>1715058460263</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1715058460263</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Agregando chatgpt">
+      <option name="closed" value="true" />
+      <created>1715058521557</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1715058521557</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
