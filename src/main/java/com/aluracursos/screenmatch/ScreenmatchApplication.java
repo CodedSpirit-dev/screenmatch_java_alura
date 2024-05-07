@@ -1,6 +1,6 @@
 package com.aluracursos.screenmatch;
 
-import com.aluracursos.screenmatch.main01.Main01;
+import com.aluracursos.screenmatch.main.Main;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,8 +15,8 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        Main01 main01 = new Main01();
-        main01.showMenu();
+        Main main = new Main();
+        main.showMenu();
 
 
 
