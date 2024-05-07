@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Erasing unnecesary files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/GenreGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Creation of a model for Serie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main01/Main01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main01/StreamsExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/StreamsExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/SeriesData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/SeriesData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +151,7 @@
       <workItem from="1714795119652" duration="2149000" />
       <workItem from="1714843140133" duration="683000" />
       <workItem from="1715048316212" duration="872000" />
-      <workItem from="1715049199778" duration="3113000" />
+      <workItem from="1715049199778" duration="3498000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -374,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715048495653</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Creation of a model for Serie">
+      <option name="closed" value="true" />
+      <created>1715052486567</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1715052486567</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +427,8 @@
     <MESSAGE value="Tratando datos" />
     <MESSAGE value="Generando busquedas y estadistica" />
     <MESSAGE value="Erasing unnecesary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erasing unnecesary files" />
+    <MESSAGE value="Creation of a model for Serie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation of a model for Serie" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

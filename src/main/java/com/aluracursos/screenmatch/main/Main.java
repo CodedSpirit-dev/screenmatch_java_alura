@@ -1,13 +1,16 @@
 package com.aluracursos.screenmatch.main;
 
 import com.aluracursos.screenmatch.model.SeasonData;
+import com.aluracursos.screenmatch.model.Serie;
 import com.aluracursos.screenmatch.model.SeriesData;
 import com.aluracursos.screenmatch.service.ApiConsume;
 import com.aluracursos.screenmatch.service.DataConversion;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * Main class for the application.
@@ -112,6 +115,13 @@ public class Main {
      * This method prints the data for each series that has been searched for.
      */
     private void showSearchedSeries() {
-        seriesData.forEach(System.out::println);
+        List<Serie> series = new ArrayList<>();
+        series = seriesData.stream()
+                .map(d -> new Serie(d))
+                .collect(Collectors.toList());
+
+        series.stream()
+                .sorted(Comparator.comparing(Serie::getGenre));
+
     }
 }
