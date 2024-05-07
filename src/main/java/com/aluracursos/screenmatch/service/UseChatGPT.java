@@ -5,7 +5,6 @@ import com.theokanning.openai.service.OpenAiService;
 
 public class UseChatGPT{
     public static String getTranslation(String text) {
-        OpenAiService service = new OpenAiService("");
 
         CompletionRequest request = CompletionRequest.builder()
                 .model("gpt-3.5-turbo-instruct")
