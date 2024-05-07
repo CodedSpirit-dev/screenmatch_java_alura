@@ -121,7 +121,7 @@ public class Main {
                 .collect(Collectors.toList());
 
         series.stream()
-                .sorted(Comparator.comparing(Serie::getGenre));
-
+                .sorted(Comparator.comparing(Serie::getGenre))
+                .forEach(System.out::println);
     }
 }

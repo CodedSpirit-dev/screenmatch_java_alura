@@ -30,12 +30,11 @@ public enum GenreGroup {
     WESTERN("Western");
 
     private String genreOMBD;
-
     GenreGroup(String genreOMBD) {
         this.genreOMBD = genreOMBD;
     }
 
-    public static GenreGroup valueOfGenre(String text) {
+    public static GenreGroup fromString(String text) {
         for (GenreGroup genreGroup : GenreGroup.values()) {
             if (genreGroup.genreOMBD.equalsIgnoreCase(text)) {
                 return genreGroup;

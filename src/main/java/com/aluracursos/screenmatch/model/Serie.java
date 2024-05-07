@@ -1,5 +1,6 @@
 package com.aluracursos.screenmatch.model;
 
+import com.aluracursos.screenmatch.service.UseChatGPT;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import jdk.jfr.Category;
 
@@ -19,9 +20,9 @@ public class Serie {
         this.totalSeasons = seriesData.totalSeasons();
         this.imdbRating = OptionalDouble.of(Double.valueOf(seriesData.imdbRating())).orElse(0.0);
         this.poster = seriesData.poster();
-        this.genre = GenreGroup.valueOf(seriesData.genre().split(",")[0].trim());
+        this.genre = GenreGroup.valueOf(seriesData.genre().split(",")[0].trim().toUpperCase());
         this.actors = seriesData.actors();
-        this.plot = seriesData.plot();
+        this.plot = UseChatGPT.getTranslation(seriesData.plot());
     }
 
     public String getTitle() {
@@ -82,12 +83,12 @@ public class Serie {
 
     @Override
     public String toString() {
-        return "title='" + title + '\'' +
-                ", totalSeasons=" + totalSeasons +
-                ", imdbRating=" + imdbRating +
-                ", poster='" + poster + '\'' +
-                ", genre=" + genre +
-                ", actors='" + actors + '\'' +
-                ", plot='" + plot + '\'';
+        return "Title='" + title + '\'' +
+                ", TotalSeasons=" + totalSeasons +
+                ", Rating=" + imdbRating +
+                ", Poster='" + poster + '\'' +
+                ", Genre=" + genre +
+                ", Actors='" + actors + '\'' +
+                ", Plot='" + plot + '\'';
     }
 }

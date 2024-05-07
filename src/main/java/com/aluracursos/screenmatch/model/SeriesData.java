@@ -11,7 +11,7 @@ public record SeriesData(
         @JsonAlias("Poster") String poster,
         @JsonAlias("Genre") String genre,
         @JsonAlias("Actors") String actors,
-        @JsonAlias("plot") String plot
+        @JsonAlias("Plot") String plot
 ) {
 
 }
