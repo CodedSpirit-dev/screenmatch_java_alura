@@ -13,7 +13,8 @@ public class UseChatGPT{
                 .temperature(0.7)
                 .build();
 
-        var answerGPT = service.createCompletion(request);
-        return answerGPT.getChoices().get(0).getText();
+        // var answerGPT = service.createCompletion(request);
+        // return answerGPT.getChoices().get(0).getText();
+        return text;
     }
 }

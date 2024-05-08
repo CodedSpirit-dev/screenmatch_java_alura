@@ -1,19 +1,31 @@
 package com.aluracursos.screenmatch.model;
 
 import com.aluracursos.screenmatch.service.UseChatGPT;
-import com.fasterxml.jackson.annotation.JsonAlias;
-import jdk.jfr.Category;
+import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.OptionalDouble;
 
+@Entity
+@Table(name = "series")
 public class Serie {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Id;
+    @Column(unique = true)
     private String title;
     private Integer totalSeasons;
-    private Double imdbRating;
     private String poster;
+    @Enumerated(EnumType.STRING)
     private GenreGroup genre;
     private String actors;
     private String plot;
+    private Double imdbRating;
+    @Transient
+    private List<Episode> episodes;
+
+    public Serie() {
+    }
 
     public Serie(SeriesData seriesData){
         this.title = seriesData.title();
@@ -23,6 +35,25 @@ public class Serie {
         this.genre = GenreGroup.valueOf(seriesData.genre().split(",")[0].trim().toUpperCase());
         this.actors = seriesData.actors();
         this.plot = UseChatGPT.getTranslation(seriesData.plot());
+    }
+
+    @Override
+    public String toString() {
+        return "Title='" + title + '\'' +
+                ", TotalSeasons=" + totalSeasons +
+                ", Rating=" + imdbRating +
+                ", Poster='" + poster + '\'' +
+                ", Genre=" + genre +
+                ", Actors='" + actors + '\'' +
+                ", Plot='" + plot + '\'';
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getTitle() {
@@ -81,14 +112,5 @@ public class Serie {
         this.plot = plot;
     }
 
-    @Override
-    public String toString() {
-        return "Title='" + title + '\'' +
-                ", TotalSeasons=" + totalSeasons +
-                ", Rating=" + imdbRating +
-                ", Poster='" + poster + '\'' +
-                ", Genre=" + genre +
-                ", Actors='" + actors + '\'' +
-                ", Plot='" + plot + '\'';
-    }
+
 }

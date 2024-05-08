@@ -3,6 +3,7 @@ package com.aluracursos.screenmatch.main;
 import com.aluracursos.screenmatch.model.SeasonData;
 import com.aluracursos.screenmatch.model.Serie;
 import com.aluracursos.screenmatch.model.SeriesData;
+import com.aluracursos.screenmatch.repository.SerieRepository;
 import com.aluracursos.screenmatch.service.ApiConsume;
 import com.aluracursos.screenmatch.service.DataConversion;
 
@@ -29,6 +30,11 @@ public class Main {
     private DataConversion converter = new DataConversion();
     // List to store the series data
     private List<SeriesData> seriesData = new ArrayList<>();
+    private SerieRepository repository;
+
+    public Main(SerieRepository serieRepository) {
+        this.repository = serieRepository;
+    }
 
     /**
      * Method to show the menu to the user.
@@ -36,6 +42,7 @@ public class Main {
      * then retrieves and prints the data for the series and its seasons.
      */
     public void showMenu() {
+
         var option = -1;
         while (option != 0) {
             var menu = """
@@ -106,7 +113,9 @@ public class Main {
      */
     private void searchWebSeries() {
         SeriesData dataSeries = getSeriesData();
-        seriesData.add(dataSeries);
+        Serie serie = new Serie(dataSeries);
+        repository.save(serie);
+        //seriesData.add(dataSeries);
         System.out.println(dataSeries);
     }
 
@@ -115,10 +124,7 @@ public class Main {
      * This method prints the data for each series that has been searched for.
      */
     private void showSearchedSeries() {
-        List<Serie> series = new ArrayList<>();
-        series = seriesData.stream()
-                .map(d -> new Serie(d))
-                .collect(Collectors.toList());
+        List<Serie> series = repository.findAll();
 
         series.stream()
                 .sorted(Comparator.comparing(Serie::getGenre))
