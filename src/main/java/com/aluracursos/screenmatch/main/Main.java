@@ -1,5 +1,6 @@
 package com.aluracursos.screenmatch.main;
 
+import com.aluracursos.screenmatch.model.Episode;
 import com.aluracursos.screenmatch.model.SeasonData;
 import com.aluracursos.screenmatch.model.Serie;
 import com.aluracursos.screenmatch.model.SeriesData;
@@ -7,10 +8,7 @@ import com.aluracursos.screenmatch.repository.SerieRepository;
 import com.aluracursos.screenmatch.service.ApiConsume;
 import com.aluracursos.screenmatch.service.DataConversion;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -31,6 +29,7 @@ public class Main {
     // List to store the series data
     private List<SeriesData> seriesData = new ArrayList<>();
     private SerieRepository repository;
+    private List<Serie> series;
 
     public Main(SerieRepository serieRepository) {
         this.repository = serieRepository;
@@ -95,16 +94,33 @@ public class Main {
      * This method retrieves and prints the data for each episode of the series.
      */
     private void searchEpisodesBySeries() {
-        SeriesData dataSeries = getSeriesData();
-        List< SeasonData > seasons = new ArrayList<>();
+        showSearchedSeries();
+        System.out.println("Please write the name of the series episodes you want to search for: ");
+        var seriesName = keyboard.nextLine();
 
-        for (int i = 1; i <= dataSeries.totalSeasons(); i++) {
-            var json = apiConsume.obtainData(URL_BASE + dataSeries.title().replace(" ", "+") + "&Season=" + i + API_KEY);
-            SeasonData seasonData = converter.obtainData(json, SeasonData.class);
-            seasons.add(seasonData);
+        Optional<Serie> serie = series.stream()
+                .filter(s -> s.getTitle().equalsIgnoreCase(seriesName))
+                .findFirst();
 
-        }
-        seasons.forEach(System.out::println);
+if (serie.isPresent()) {
+    var foundSerie = serie.get();
+    List<SeasonData> seasons = new ArrayList<>();
+
+    for (int i = 1; i <= foundSerie.getTotalSeasons(); i++) {
+        //var json = apiConsume.obtainData(URL_BASE + "=" + getSeriesData().title().replace(" ", "+") + "&season=" + i + API_KEY);
+        var json = apiConsume.obtainData(URL_BASE + "=" + foundSerie.getTitle().replace(" ", "+") + "&season=" + i + API_KEY);
+        SeasonData seasonData = converter.obtainData(json, SeasonData.class);
+        seasons.add(seasonData);
+    }
+    seasons.forEach(System.out::println);
+    List<Episode> episodes = seasons.stream()
+            .flatMap(d -> d.episodes().stream()
+                    .map(e -> new Episode(d.seasonNumber(), e)))
+            .collect(Collectors.toList());
+
+    foundSerie.setEpisodes(episodes);
+    repository.save(foundSerie);
+}
     }
 
     /**
@@ -124,7 +140,7 @@ public class Main {
      * This method prints the data for each series that has been searched for.
      */
     private void showSearchedSeries() {
-        List<Serie> series = repository.findAll();
+        series = repository.findAll();
 
         series.stream()
                 .sorted(Comparator.comparing(Serie::getGenre))

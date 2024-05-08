@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Agregando chatgpt">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/repository/SerieRepository.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Adding data persistance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Episode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Episode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/UseChatGPT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/UseChatGPT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +158,7 @@
       <workItem from="1715117516985" duration="2892000" />
       <workItem from="1715129640758" duration="2050000" />
       <workItem from="1715131704505" duration="195000" />
+      <workItem from="1715132035622" duration="6038000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -418,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715058521557</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Adding data persistance">
+      <option name="closed" value="true" />
+      <created>1715132292403</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1715132292403</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +476,8 @@
     <MESSAGE value="Erasing unnecesary files" />
     <MESSAGE value="Creation of a model for Serie" />
     <MESSAGE value="Agregando chatgpt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregando chatgpt" />
+    <MESSAGE value="Adding data persistance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding data persistance" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
