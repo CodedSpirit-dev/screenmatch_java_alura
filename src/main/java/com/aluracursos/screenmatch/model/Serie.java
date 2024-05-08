@@ -3,6 +3,7 @@ package com.aluracursos.screenmatch.model;
 import com.aluracursos.screenmatch.service.UseChatGPT;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
 
@@ -21,8 +22,8 @@ public class Serie {
     private String actors;
     private String plot;
     private Double imdbRating;
-    @Transient
-    private List<Episode> episodes;
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
+    private List<Episode> episodes = new ArrayList<>();
 
     public Serie() {
     }
@@ -30,12 +31,13 @@ public class Serie {
     public Serie(SeriesData seriesData){
         this.title = seriesData.title();
         this.totalSeasons = seriesData.totalSeasons();
-        this.imdbRating = OptionalDouble.of(Double.valueOf(seriesData.imdbRating())).orElse(0.0);
+        this.imdbRating = seriesData.imdbRating() != null ? Double.valueOf(seriesData.imdbRating()) : null;
         this.poster = seriesData.poster();
         this.genre = GenreGroup.valueOf(seriesData.genre().split(",")[0].trim().toUpperCase());
         this.actors = seriesData.actors();
-        this.plot = UseChatGPT.getTranslation(seriesData.plot());
+        this.plot = seriesData.plot();
     }
+
 
     @Override
     public String toString() {
@@ -112,5 +114,11 @@ public class Serie {
         this.plot = plot;
     }
 
+    public List<Episode> getEpisodes() {
+        return episodes;
+    }
 
+    public void setEpisodes(List<Episode> episodes) {
+        this.episodes = episodes;
+    }
 }
