@@ -57,6 +57,7 @@ public class Main {
                     5 - Top 5 best series
                     6 - Search series by category
                     7 - Search series by total seasons and IMDb rating
+                    8 - Search episodes by name
 
                     0 - Exit
                     """;
@@ -93,6 +94,9 @@ public class Main {
                     case 7:
                         searchSeriesByTotalSeasonsAndImdbRating();
                         break;
+                    case 8:
+                        searchEpisodesByName();
+                        break;
                 case 0:
                     // Exit the application
                     System.out.println("Goodbye!");
@@ -102,6 +106,17 @@ public class Main {
                     System.out.println("Invalid option. Please try again.");
             }
         }
+    }
+
+    private void searchEpisodesByName() {
+        System.out.println("Please write the name of the episode you want to search for: ");
+        var episodeName = keyboard.nextLine();
+        List<Episode> foundEpisodes = repository.episodesByName(episodeName);
+
+        foundEpisodes.forEach(e ->
+                System.out.printf("Serie: %s Season: %s Episode: %s Rating %s",
+                        e.getSerie(), e.getSeason(), e.getEpisodeNumber(), e.getImbdRating()));
+
     }
 
     private void searchSeriesByTotalSeasonsAndImdbRating() {
