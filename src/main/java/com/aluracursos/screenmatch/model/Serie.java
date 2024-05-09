@@ -23,7 +23,7 @@ public class Serie {
     private String plot;
     private Double imdbRating;
     @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Episode> episodes = new ArrayList<>();
+    private List<Episode> episodes;
 
     public Serie() {
     }

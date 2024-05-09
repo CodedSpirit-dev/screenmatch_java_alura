@@ -114,8 +114,9 @@ public class Main {
         List<Episode> foundEpisodes = repository.episodesByName(episodeName);
 
         foundEpisodes.forEach(e ->
-                System.out.printf("Serie: %s Season: %s Episode: %s Rating %s",
-                        e.getSerie(), e.getSeason(), e.getEpisodeNumber(), e.getImbdRating()));
+                System.out.printf("Episode %s from season %s of the series %s%n", e.getTitle(), e.getSeason(), e.getSerie().getTitle()));
+
+        System.out.println(foundEpisodes);
 
     }
 

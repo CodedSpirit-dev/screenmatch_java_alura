@@ -42,6 +42,6 @@ public interface SerieRepository extends JpaRepository<Serie, Long>{
     List<Serie> findSeriesBySeasonAndImdbRating(int totalSeasons, double imdbRating);
 
 
-    @Query(value = "SELECT e FROM Serie s JOIN s.episodes e WHERE e.title ILIKE %:episodeName%")
+    @Query("SELECT e FROM Serie s JOIN s.episodes e WHERE e.title ILIKE %:episodeName%")
     List<Episode> episodesByName(String episodeName);
 }
