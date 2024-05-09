@@ -3,6 +3,7 @@ package com.aluracursos.screenmatch.repository;
 import com.aluracursos.screenmatch.model.GenreGroup;
 import com.aluracursos.screenmatch.model.Serie;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 import java.util.Optional;
@@ -35,4 +36,6 @@ public interface SerieRepository extends JpaRepository<Serie, Long>{
      * @return A List of Series that belong to the specified genre.
      */
     List<Serie> findByGenre(GenreGroup genre);
+    @Query(value = "SELECT s FROM Serie s WHERE s.totalSeasons <= :totalSeasons AND s.imdbRating >= :imdbRating")
+    List<Serie> findSeriesBySeasonAndImdbRating(int totalSeasons, double imdbRating);
 }

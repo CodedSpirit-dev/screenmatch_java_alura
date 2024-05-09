@@ -56,6 +56,7 @@ public class Main {
                     4 - Search series by title
                     5 - Top 5 best series
                     6 - Search series by category
+                    7 - Search series by total seasons and IMDb rating
 
                     0 - Exit
                     """;
@@ -89,6 +90,9 @@ public class Main {
                     case 6:
                         searchSeriesByCategory();
                         break;
+                    case 7:
+                        searchSeriesByTotalSeasonsAndImdbRating();
+                        break;
                 case 0:
                     // Exit the application
                     System.out.println("Goodbye!");
@@ -98,6 +102,17 @@ public class Main {
                     System.out.println("Invalid option. Please try again.");
             }
         }
+    }
+
+    private void searchSeriesByTotalSeasonsAndImdbRating() {
+        System.out.println("Please write the total seasons of the series you want to search for: ");
+        var totalSeasons = keyboard.nextInt();
+        System.out.println("Please write the IMDb rating of the series you want to search for: ");
+        var imdbRating = keyboard.nextDouble();
+        List<Serie> filterSeries = repository.findSeriesBySeasonAndImdbRating(totalSeasons, imdbRating);
+        System.out.println("Series by total seasons and IMDb rating: ");
+        filterSeries.forEach(s ->
+                System.out.println(s.getTitle() + " - " + s.getTotalSeasons() + " - " + s.getImdbRating()));
     }
 
     private void searchSeriesByCategory() {
