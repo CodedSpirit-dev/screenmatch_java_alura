@@ -18,20 +18,23 @@ public class Main {
     // Constant for the base URL of the API
     private final String URL_BASE = "https://www.omdbapi.com/?t";
     // Scanner object for reading user input
-    private Scanner keyboard = new Scanner(System.in);
+    private final Scanner keyboard = new Scanner(System.in);
     // Service for consuming the API
-    private ApiConsume apiConsume = new ApiConsume();
+    private final ApiConsume apiConsume = new ApiConsume();
     // Service for converting data
-    private DataConversion converter = new DataConversion();
+    private final DataConversion converter = new DataConversion();
     // List to store the series data
-    private List<SeriesData> seriesData = new ArrayList<>();
+    private final List<SeriesData> seriesData = new ArrayList<>();
     // Repository for persisting series data
-    private SerieRepository repository;
+    private final SerieRepository repository;
     // List to store series objects
     private List<Serie> series;
+// Optional to store the searched series
+    private Optional<Serie> searchedSerie;
 
     /**
      * Constructor for the Main class.
+     *
      * @param serieRepository The repository used for persisting series data.
      */
     public Main(SerieRepository serieRepository) {
@@ -58,6 +61,7 @@ public class Main {
                     6 - Search series by category
                     7 - Search series by total seasons and IMDb rating
                     8 - Search episodes by name
+                    9 - Top 5 episodes by Serie
 
                     0 - Exit
                     """;
@@ -88,15 +92,18 @@ public class Main {
                     // Show the top 5 best series
                     top5BestSeries();
                     break;
-                    case 6:
-                        searchSeriesByCategory();
-                        break;
-                    case 7:
-                        searchSeriesByTotalSeasonsAndImdbRating();
-                        break;
-                    case 8:
-                        searchEpisodesByName();
-                        break;
+                case 6:
+                    searchSeriesByCategory();
+                    break;
+                case 7:
+                    searchSeriesByTotalSeasonsAndImdbRating();
+                    break;
+                case 8:
+                    searchEpisodesByName();
+                    break;
+                case 9:
+                    searchTop5EpisodesBySerie();
+                    break;
                 case 0:
                     // Exit the application
                     System.out.println("Goodbye!");
@@ -106,6 +113,17 @@ public class Main {
                     System.out.println("Invalid option. Please try again.");
             }
         }
+    }
+
+    private void searchTop5EpisodesBySerie() {
+        searchSeriesByTitle();
+        if (searchedSerie.isPresent()) {
+            Serie serie = searchedSerie.get();
+            List<Episode> top5Episodes = repository.top5Episodes(serie);
+            top5Episodes.forEach(e ->
+                    System.out.printf("Serie: %s - Episode: %s - Rating: %s%n", e.getSerie().getTitle(), e.getTitle(), e.getImbdRating()));
+        }
+
     }
 
     private void searchEpisodesByName() {
@@ -162,7 +180,7 @@ public class Main {
         var seriesName = keyboard.nextLine();
 
         // Retrieve the series from the repository
-        Optional<Serie> searchedSerie = repository.findByTitleContainsIgnoreCase(seriesName);
+        searchedSerie = repository.findByTitleContainsIgnoreCase(seriesName);
 
         // Print the series data if it was found, or a message if it was not found
         if (searchedSerie.isPresent()) {
@@ -176,6 +194,7 @@ public class Main {
      * Method to get the series data from the API.
      * This method asks the user for the name of the series they want to search for,
      * then retrieves and returns the data for the series.
+     *
      * @return The series data.
      */
     private SeriesData getSeriesData() {

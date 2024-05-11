@@ -7,7 +7,6 @@
     <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Today I give up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/repository/SerieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/repository/SerieRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +158,9 @@
       <workItem from="1715131704505" duration="195000" />
       <workItem from="1715132035622" duration="6134000" />
       <workItem from="1715211058647" duration="213000" />
-      <workItem from="1715211288883" duration="10836000" />
+      <workItem from="1715211288883" duration="10878000" />
+      <workItem from="1715295609261" duration="4462000" />
+      <workItem from="1715386759498" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -465,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715221825545</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Today I give up">
+      <option name="closed" value="true" />
+      <created>1715222373747</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1715222373747</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
