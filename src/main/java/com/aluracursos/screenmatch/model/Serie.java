@@ -56,7 +56,7 @@ public class Serie {
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.Id = id;
     }
 
     public String getTitle() {

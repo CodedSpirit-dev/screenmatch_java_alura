@@ -4,28 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Today I give up">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplicationConsole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/config/CorsConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/controller/SerieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/dto/SerieDTO.java" afterDir="false" />
+    <list default="true" id="6519f5af-6f16-4789-8b47-6c804e27ce59" name="Changes" comment="Added the endpoints for the page">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/dto/EpisodeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/service/SerieService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/ScreenmatchApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/controller/SerieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/controller/SerieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/dto/SerieDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/dto/SerieDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/model/Serie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/repository/SerieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluracursos/screenmatch/repository/SerieRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -72,40 +75,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.MainWithLists.executor": "Run",
-    "Application.Principal.executor": "Run",
-    "Application.mainWithSearch.executor": "Run",
-    "HTTP Request.generated-requests | #1.executor": "Run",
-    "HTTP Request.generated-requests | #2.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ScreenmatchApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/desafio/desafioalura_java_springboot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainWithLists.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
+    &quot;Application.mainWithSearch.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #2.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #3.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #5.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ScreenmatchApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/desafio/desafioalura_java_springboot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.aluracursos.screenmatch.dto" />
       <recent name="com.aluracursos.screenmatch.model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -119,6 +125,12 @@
     <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ScreenmatchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="screenmatch" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aluracursos.screenmatch.ScreenmatchApplication" />
@@ -128,6 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #5" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
       </list>
@@ -185,7 +199,10 @@
       <workItem from="1715386759498" duration="11000" />
       <workItem from="1715643389390" duration="48000" />
       <workItem from="1715643448633" duration="30000" />
-      <workItem from="1715643805725" duration="4798000" />
+      <workItem from="1715643805725" duration="5861000" />
+      <workItem from="1715819529671" duration="29000" />
+      <workItem from="1715819567565" duration="11907000" />
+      <workItem from="1715913737029" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="Frist commit">
       <option name="closed" value="true" />
@@ -499,7 +516,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715222373747</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Changed CORS, new GET method, adding web dependency.">
+      <option name="closed" value="true" />
+      <created>1715648716029</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1715648716029</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,8 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="First commit" />
-    <MESSAGE value="show info" />
     <MESSAGE value="Series, movies models" />
     <MESSAGE value="Finishing for this episode" />
     <MESSAGE value="Adding a .tostring change" />
@@ -555,7 +578,9 @@
     <MESSAGE value="Adding search by genre and top 5 by imdb" />
     <MESSAGE value="Using native querys" />
     <MESSAGE value="Today I give up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Today I give up" />
+    <MESSAGE value="Changed CORS, new GET method, adding web dependency." />
+    <MESSAGE value="Added the endpoints for the page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the endpoints for the page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
